@@ -1,3 +1,5 @@
+import os
+
 import discord
 from discord.ext import commands
 import checks
@@ -6,6 +8,16 @@ import checks
 class AdminCommands:
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command()
+    @checks.is_owner()
+    async def change_picture(self, picture):
+        await self.bot.edit_profile(avatar=open(picture, "rb").read())
+
+    @commands.command()
+    @checks.is_owner()
+    async def change_game(self, game):
+        await self.bot.change_presence(game=discord.Game(name=game))
 
     @commands.command()
     @checks.is_owner()
