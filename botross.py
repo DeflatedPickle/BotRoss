@@ -4,8 +4,6 @@ from datetime import datetime
 
 from discord.ext import commands
 
-# https://discordapp.com/oauth2/authorize?client_id=313728091702951937&scope=bot&permissions=0
-
 description = "A Discord bot that will make Bob Ross paint a given image."
 
 startup_extentions = ["cogs.botross-admin_commands", "cogs.botross-user_commands", "cogs.botross-paint", "cogs.botross-events"]
