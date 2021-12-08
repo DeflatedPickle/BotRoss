@@ -1,0 +1,3 @@
+[submodule "libs/thejoyofpynting"]
+	path = libs/thejoyofpynting
+	url = https://github.com/DeflatedPickle/thejoyofpynting
